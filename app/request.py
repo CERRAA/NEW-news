@@ -78,8 +78,9 @@ def process_source(source_list):
     news_results = []
     for source_item in source_list:
         name = source_item.get('name')
+        url = source_item.get('url')
     
-        news_object = Source(name)
+        news_object = Source(name,url)
         news_results.append(news_object)
 
     return news_results
