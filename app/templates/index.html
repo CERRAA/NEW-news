@@ -9,12 +9,16 @@
 <!-- Content block -->
 
     {% block content %}
+    <h1 style="text-align: center; margin-right: 6%; font-size: 60px; color: aqua;">Daily Trending News</h1>
           {% for new in news%}
-          <div class="col-md-5 d-flex" style="margin: 10px; margin-left:20px ;">
-          <div class="card" style="width: 1000px;">
-             <img src={{new.img}}  alt="">
+          <div class="col-md-5 d-flex" style="margin: 1%; margin-left: 5%;">
+          <div class="card">
+            <a href={{new.url}}>
+             <img class="card-img" src={{new.img}}  alt="">
+            </a>
             <div class="card-body">
           <h1>{{new.content}}</h1>
+          <h5>Published at: {{new.published}}</h5>
             </div>
           </div>
           </div>
